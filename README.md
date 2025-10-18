@@ -1,70 +1,23 @@
-# Elevator Saga
+# 电梯调度可视化系统
 
-<div align="center">
+本项目实现了一个**电梯调度算法的模拟与可视化系统**。
 
-[![PyPI version](https://badge.fury.io/py/elevator-py.svg)](https://badge.fury.io/py/elevator-py)
-[![Python versions](https://img.shields.io/pypi/pyversions/elevator-py.svg)](https://pypi.org/project/elevator-py/)
-[![Build Status](https://github.com/ZGCA-Forge/Elevator/actions/workflows/ci.yml/badge.svg)](https://github.com/ZGCA-Forge/Elevator/actions)
-[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-brightgreen)](https://zgca-forge.github.io/Elevator/)
-
-[![GitHub stars](https://img.shields.io/github/stars/ZGCA-Forge/Elevator.svg?style=social&label=Star)](https://github.com/ZGCA-Forge/Elevator)
-[![GitHub forks](https://img.shields.io/github/forks/ZGCA-Forge/Elevator.svg?style=social&label=Fork)](https://github.com/ZGCA-Forge/Elevator/fork)
-[![GitHub issues](https://img.shields.io/github/issues/ZGCA-Forge/Elevator.svg)](https://github.com/ZGCA-Forge/Elevator/issues)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ZGCA-Forge/Elevator/blob/main/LICENSE)
-
-</div>
+我们的设计理念是：
+> **基于真实电梯调度逻辑** —— 电梯根据自身的行进方向来决定接载哪些乘客，从而最大化运行效率并减少等待时间。
 
 ---
 
-Elevator Saga is a Python implementation of an elevator [simulation game](https://play.elevatorsaga.com/) with a event-driven architecture Design and optimize elevator control algorithms to efficiently transport passengers in buildings.
+## 启动方式
 
-### Features
-
-- 🏢 **Realistic Simulation**: Physics-based elevator movement with acceleration, deceleration, and realistic timing
-
-## Installation
-
-### Basic Installation
-
-```bash
-pip install elevator-py
+### 带可视化界面
+系统会自动启动服务器与前端可视化界面：
+```
+start.sh
 ```
 
-## Quick Start
+### 不带可视化界面
 
-### Running the Game
-
-```bash
-# Start the backend simulator (Terminal #1)
-python -m elevator_saga.server.simulator
+```
+start_no_gui.sh
 ```
 
-```bash
-# Start your own client (Terminal #2)
-# Example:
-python -m elevator_saga.client_examples.bus_example
-```
-
-## Documentation
-
-For detailed documentation, please visit: [https://zgca-forge.github.io/Elevator/](https://zgca-forge.github.io/Elevator/)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ZGCA-Forge/Elevator&type=Date)](https://star-history.com/#ZGCA-Forge/Elevator&Date)
-
-## License
-
-This project is licensed under MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-
-Made with ❤️ by the ZGCA-Forge Team
-
-</div>
