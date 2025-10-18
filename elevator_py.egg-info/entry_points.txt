@@ -1,0 +1,6 @@
+[console_scripts]
+elevator-batch-test = elevator_saga.grader.batch_runner:main
+elevator-client = elevator_saga.cli.main:client_main
+elevator-grader = elevator_saga.grader.grader:main
+elevator-saga = elevator_saga.cli.main:main
+elevator-server = elevator_saga.cli.main:server_main
