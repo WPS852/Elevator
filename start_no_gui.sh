@@ -1,10 +1,15 @@
 #!/bin/bash
 
-echo "[INFO] 启动服务器..."
-bash -c "python3 -m elevator_saga.server.simulator; exec bash"
+# 1) 先启动 server，后台运行
+python -m elevator_saga.server.simulator &
+SERVER_PID=$!
 
-sleep 2
-echo "[INFO] 启动算法客户端..."
-bash -c "python3 -m elevator_saga.client_examples.our_example; exec bash"
+# 2) 等待 server 端口就绪
+echo "Waiting for server to start..."
+until curl -s http://127.0.0.1:8000/api/state > /dev/null 2>&1; do
+    sleep 1
+done
+echo "✅ Server is up!"
 
-echo "[INFO] 所有进程已启动。"
+# 3) 再启动 client
+python -m elevator_saga.client_examples.our_example
