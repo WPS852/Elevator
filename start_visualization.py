@@ -3,6 +3,8 @@
 电梯可视化系统启动脚本
 一键启动服务器、算法和数据记录
 """
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 import sys
 import time
 import subprocess
@@ -51,10 +53,10 @@ def check_files():
     print("\n[检查] 文件...")
     
     required_files = [
-        'elevator_saga/server/simulator.py',
-        'elevator_saga/client_examples/our_example.py',
-        'record.py',
-        'index.html'
+    os.path.join(BASE_DIR, 'elevator_saga/server/simulator.py'),
+    os.path.join(BASE_DIR, 'elevator_saga/client_examples/our_example.py'),
+    os.path.join(BASE_DIR, 'record.py'),
+    os.path.join(BASE_DIR, 'index.html')
     ]
     
     for file in required_files:
